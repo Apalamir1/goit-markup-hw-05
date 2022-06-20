@@ -48,7 +48,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  justify-content:center;
 }
 .section{
   padding: 94px 0px;
@@ -125,6 +124,8 @@ margin-left: 50px;
   color: var(--focus-color);
 }
 .link-contact {
+  display: flex;
+  align-items: center;
   color: var(--font-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -338,6 +339,7 @@ position: relative;
   display:flex;
   justify-content: center;
   fill: var(--font-color);
+  margin-top: 16px;
 }
 .team-link .team-link-item+.team-link-item{
   margin-left: 10px;
@@ -350,7 +352,6 @@ position: relative;
   height: 44px;
   border-radius: 50%;
   fill: var(--link-color);
-  margin-top: 16px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -411,7 +412,7 @@ position: relative;
 }
 .first{
   display: flex;
-  justify-content: left;
+  align-items: baseline;
 }
 .logo-footer {
   display: block;
@@ -451,8 +452,7 @@ position: relative;
   display: block;
 }
 .footer-social{
-  padding-top: 12px;
-  padding-left: 70px;
+  margin-left: 70px;
   font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -541,11 +541,15 @@ position: relative;
   width: 370px;
   margin-right: 30px;
   margin-top: 30px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
-.filter-item:hover,
-.filter-item:focus{
+.filter-item-shadow {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-item-shadow:hover,
+.filter-item-shadow:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .filter-item:nth-child(3n) {
