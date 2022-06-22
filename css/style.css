@@ -25,7 +25,6 @@ ul {
   margin: 0;
 }
 button {
-  direction: none;
   border: none;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -54,6 +53,7 @@ img {
 }
 /*header*/
 .hdr {
+  display: flex;
   border-bottom: 1px solid #ECECEC;
 }
 .site-nav {
@@ -68,8 +68,7 @@ img {
 }
 .contact-nav {
   display:inline-flex;
-  margin-left: 331px;
-  margin-right: -281px;
+  margin-left: auto;
 }
 .contact-nav .hdr-position + .hdr-position{
 margin-left: 50px;
@@ -78,6 +77,11 @@ margin-left: 50px;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  color: var(--main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item :hover{
+  color: var(--focus-color);
 }
 .presence-effect{
   color: var(--focus-color);
@@ -117,7 +121,6 @@ margin-left: 50px;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link :hover,
 .link :focus {
@@ -616,7 +619,8 @@ padding: 20px 24px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);;
-  
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal.is-hidden{
 opacity: 0;
@@ -628,11 +632,14 @@ pointer-events: none;
   min-height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.modal.is-hidden .modal-form{
+  transform: translate(-50%, -50%)scale(0.9);
 }
 .close-button{
   position: absolute;
